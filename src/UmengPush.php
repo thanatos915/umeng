@@ -25,11 +25,12 @@ class UmengPush
 
     protected $production_mode = 'true';
 
-    function __construct($key, $secret)
+    function __construct($key, $secret, $deug = false)
     {
         $this->appkey = $key;
         $this->appMasterSecret = $secret;
         $this->timestamp = strval(time());
+        $this->production_mode = !$deug;
     }
 
     public function sendAndroidBroadcast(array $values, array $extra)
