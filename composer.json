@@ -1,0 +1,21 @@
+{
+	"name" : "thanatos915/umeng",
+	"description" : "umeng push move to composer",
+	"type" : "library",
+	"license" : "GPL-3.0",
+	"authors" : [{
+			"name" : "thanatos",
+			"email" : "thanatos915@163.com"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"Umeng\\" : "src"
+		}
+	},
+	"keywords" : [
+		"umeng",
+		"umeng-push",
+		"友盟"
+	]
+}
