@@ -32,7 +32,7 @@ class UmengPush
         $this->timestamp = strval(time());
     }
 
-    function sendAndroidBroadcast(array $values, array $extra)
+    public function sendAndroidBroadcast(array $values, array $extra)
     {
         $_values = [
             'ticker' => '', // 必填 通知栏提示文字
@@ -108,7 +108,7 @@ class UmengPush
         }
     }
 
-    function sendAndroidFilecast(array $values, array $extra, array $tokens)
+    public function sendAndroidFilecast(array $values, array $extra, array $tokens)
     {
         $values = [
             'ticker' => '', // 必填 通知栏提示文字
@@ -144,7 +144,7 @@ class UmengPush
         }
     }
 
-    function sendAndroidGroupcast(array $values, array $extra, array $tags)
+    public function sendAndroidGroupcast(array $values, array $extra, array $tags)
     {
         $values = [
             'ticker' => '', // 必填 通知栏提示文字
@@ -194,7 +194,7 @@ class UmengPush
         }
     }
 
-    function sendAndroidCustomizedcast(array $values, array $extra, $alias, $aliasType)
+    public function sendAndroidCustomizedcast(array $values, array $extra, $alias, $aliasType)
     {
         $values = [
             'ticker' => '', // 必填 通知栏提示文字
@@ -232,7 +232,7 @@ class UmengPush
         }
     }
 
-    function sendAndroidCustomizedcastFileId(array $values, array $extra, array $tokens)
+    public function sendAndroidCustomizedcastFileId(array $values, array $extra, array $tokens)
     {
         $values = [
             'ticker' => '', // 必填 通知栏提示文字
@@ -270,7 +270,7 @@ class UmengPush
         }
     }
 
-    function sendIOSBroadcast()
+    public function sendIOSBroadcast()
     {
         try {
             $brocast = new IOSBroadcast();
@@ -325,7 +325,7 @@ class UmengPush
         }
     }
 
-    function sendIOSFilecast()
+    public function sendIOSFilecast()
     {
         try {
             $filecast = new IOSFilecast();
@@ -349,7 +349,7 @@ class UmengPush
         }
     }
 
-    function sendIOSGroupcast()
+    public function sendIOSGroupcast()
     {
         try {
             /*
@@ -391,7 +391,7 @@ class UmengPush
         }
     }
 
-    function sendIOSCustomizedcast()
+    public function sendIOSCustomizedcast()
     {
         try {
             $customizedcast = new IOSCustomizedcast();
